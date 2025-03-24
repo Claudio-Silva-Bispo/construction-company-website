@@ -20,8 +20,6 @@ export default function Navbar() {
     { item: 'Home', path: '/', icon: faHome },
     { item: 'Sobre nós', path: '#about', icon: faBuilding },
     { item: 'Contato', path: '#contact', icon: faPhone },
-    { item: 'Orçamento', path: '#quote', icon: faCalendarAlt },
-    { item: 'Tabela preço', path: '#price-table', icon: faMoneyCheckDollar },
     { item: 'Serviços', path: '#services', icon: faCalendarTimes },
     { item: 'Testimonials', path: '#receber-feedback', icon: faThumbsUp },
     { item: 'Dicas', path: '#tips', icon: faShareAlt },
@@ -47,39 +45,6 @@ export default function Navbar() {
       icon: faThumbsUp,
       description: 'O que nossos clientes andam falando',
       path: '/Testimonials',
-    },
-    {
-      title: 'Eventos',
-      icon: faCalendarTimes,
-      description: 'Serviços exclusivos para aniversários',
-      path: '/Services',
-    },
-    
-    {
-      title: 'Natureza',
-      icon: faComments,
-      description: 'Imagine as imagens na natureza',
-      path: '/Feedback',
-    },
-    
-    {
-      title: 'Crianças',
-      icon: faShareAlt,
-      description: 'Sessão exclusiva para criaças',
-      path: '/Tips',
-    },
-    {
-      title: 'Adultos',
-      icon: faUsers,
-      description: 'Sessão exclusiva para adultos',
-      path: '/Team',
-    },
-    
-    {
-      title: 'Casamentos',
-      icon: faEnvelope,
-      description: 'Sessão exclusiva para casamentos',
-      path: '/NewsLetter',
     },
     {
       title: 'Galeria Personalizada',
@@ -132,7 +97,7 @@ export default function Navbar() {
     <header className={`p-4 fixed top-0 w-full z-50 text-gray-700'}`} >
       <div className="container flex justify-between h-10 mx-auto w-full">
         <div className="hidden md:flex md:h-10 md:w-40">
-          <a href="/"><Image width={40} height={40} src={"/assets/Logo/logo.png"} alt="Logo da empresa" /></a>
+          <a href="/"><Image width={40} height={40} src={""} alt="Logo da empresa" /></a>
         </div>
         <div className="hidden lg:flex items-center space-x-3 text-lg">
           <Link href="/" className="px-4 py-2 hover:bg-[#9b4819] hover:text-white rounded-md flex items-center space-x-2">
@@ -169,7 +134,7 @@ export default function Navbar() {
           
         </div>
         <div className="hidden lg:flex items-center">
-          <a href="tel:+5511999999999" className="px-4 py-2 bg-[#9b4819] hover:text-white text-white rounded-md">Contato +(206) 9999-8888</a>
+          <a href="tel:+5511999999999" className="px-4 py-2 bg-terceira hover:text-white text-white rounded-md">Contato +(206) 9999-8888</a>
         </div>
         <button onClick={toggleMobileMenu} className="lg:hidden p-4 text-gray-800">
           <FontAwesomeIcon icon={faBars} size="lg" />
@@ -178,7 +143,7 @@ export default function Navbar() {
 
       {/* Menu mobile */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 bg-[#f4f1e8] z-40 flex flex-col lg:hidden text-[#9b4819]">
+        <div className="fixed inset-0 bg-terceira z-40 flex flex-col lg:hidden text-white">
           <button onClick={toggleMobileMenu} className="self-end text-[#9b4819] pt-5">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -187,14 +152,14 @@ export default function Navbar() {
               stroke="currentColor"
               className="w-6 h-6"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" className='text-[#9b4819]'/>
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" className='text-white'/>
             </svg>
           </button>
 
           <ul className="flex flex-col items-start space-y-4 px-3">
             {menuItems.map((menuItem) => (
               <li key={menuItem.item} className="w-full border-b border-white last:border-none">
-                <Link href={menuItem.path} className="text-lg text-[#9b4819] flex items-center space-x-3 py-3" onClick={() => { handleHashLinkClick(menuItem.path); toggleMobileMenu(); }}>
+                <Link href={menuItem.path} className="text-lg text-white flex items-center space-x-3 py-3" onClick={() => { handleHashLinkClick(menuItem.path); toggleMobileMenu(); }}>
                   <FontAwesomeIcon icon={menuItem.icon} />
                   <span>{menuItem.item}</span>
                 </Link>

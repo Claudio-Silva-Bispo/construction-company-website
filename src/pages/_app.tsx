@@ -11,12 +11,12 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {!isDashboard && <Navbar />}
+      {<Navbar />}
         <main className="flex-1">
           <Component {...pageProps} />
           
         </main>
-        {!isDashboard && <Footer />}
+        <Footer />
     </div>
   );
 }

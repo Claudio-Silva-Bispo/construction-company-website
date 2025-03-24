@@ -9,11 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primeira: "#B9E6F7",
-        segunda: "#A4DDF8",
-        terceira: "#8BD6F4",
-        quarta: "#77CFF2",
-        quinta: "#2491E4",
+        primeira: "#0C1D37",
+        segunda: "#152A47",
+        terceira: "#213C59",
+        quarta: "#77CFC99D60F2",
+        quinta: "#5D5D56",
+        sexta: "#f4f1e8",
+        setima: "#bd8f53",
         gray: {
           50: '#F9FAFB',
           100: '#F3F4F6',
@@ -36,6 +38,19 @@ const config: Config = {
         'lx': '1200px',
         'xl': '1400px',
         'xxl': '1600px',
+      },
+      fontFamily: {
+        'titulo': ['Plus Jakarta Sans', 'sans-serif'],
+        'descritivo': ['Inter', 'sans-serif'],
+      },
+      fontWeight: {
+        light: "100",
+        regular: "400",
+        medium: "500",
+        semiBold: "600",
+        bold: "700",
+        extraBold: "800",
+        black: "900",
       },
     },
   },
