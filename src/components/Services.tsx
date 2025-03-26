@@ -181,7 +181,7 @@ const Services = () => {
             key={step.id}
             className="step-container"
             data-step={step.id}
-            style={{ height: "120vh" }}
+            style={{ height: "100vh" }}
           >
             <div className="flex flex-col md:flex-row mx-auto gap-12 items-center">
               {/* Lado esquerdo (texto) */}
