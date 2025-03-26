@@ -1,7 +1,10 @@
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { FaBaby, FaCamera, FaCameraRetro, FaHeart, FaImage, FaLaptopMedical, FaPhotoVideo } from 'react-icons/fa';
 
 const Services = () => {
-  // Definição dos dados das etapas
+
+  const [isMobile, setIsMobile] = useState(false);
+
   const steps = [
     {
       id: "construction",
@@ -81,6 +84,18 @@ const Services = () => {
     }
   ];
 
+  // Para os cards
+  const services = [
+    { icon: FaCamera, details: 'Saiba mais', images: ['/assets/Service/imagem1.jpeg'] },
+    { icon: FaImage, details: 'Saiba mais', images: ['/assets/Service/profissional/camera-carrousel.png'] },
+    { icon: FaPhotoVideo, details: 'Saiba mais', images: ['/assets/Service/cozinheira-baby.png'] },
+    { icon: FaHeart, details: 'Saiba mais', images: ['/assets/Service/familia/familia-natureza.jpg'] },
+    { icon: FaCameraRetro, details: 'Saiba mais', images: ['/assets/Service/sofa-mulher.png'] },
+    { icon: FaLaptopMedical, details: 'Saiba mais', images: ['/assets/Service/social-media/janela-media-social.png'] },
+    { icon: FaBaby, details: 'Saiba mais', images: ['/assets/Service/baby-gestantes.png'] },
+    { title: 'Publicidade', description: 'Divulgue seus produtos e serviços.', icon: FaBaby, details: 'Saiba mais', images: ['/assets/Service/social-media/publicidade.jpg'] },
+  ];
+
   // Estado atual da etapa ativa
   const [activeStep, setActiveStep] = useState(steps[0].id);
   const sectionRef = useRef(null);
@@ -101,41 +116,51 @@ const Services = () => {
     // Função para atualizar a cor de fundo com base na posição de rolagem
     const handleScroll = () => {
       const scrollPosition = window.pageYOffset;
-      
+
       // Encontrar a etapa atual com base na posição de rolagem
       let currentStep = stepOffsets[0].id;
-      
+
       for (let i = 0; i < stepOffsets.length; i++) {
         if (scrollPosition >= stepOffsets[i].offset) {
           currentStep = stepOffsets[i].id;
         }
       }
-      
+
       setActiveStep(currentStep || steps[0].id);
     };
 
     // Adicionar o evento de rolagem
     window.addEventListener('scroll', handleScroll);
-    
+
     // Chamar uma vez para definir a cor inicial
     handleScroll();
-    
+
     // Limpar o evento ao desmontar
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
+
   return (
-    <div 
+    <div
       ref={sectionRef}
       className={`min-h-screen w-full overflow-x-hidden transition-all duration-800 ease-in-out`}
       style={{ backgroundColor: getActiveColor() }}
     >
       {/* Indicadores de etapas (à esquerda) */}
-      <div className="fixed left-5 top-1/2 transform -translate-y-1/2 flex flex-col gap-4 z-10">
+      <div className="hidden fixed left-5 top-1/2 transform -translate-y-1/2 md:flex flex-col gap-5 z-10">
         {steps.map((step) => (
-          <div 
+          <div
             key={step.id}
             className={`w-2.5 h-2.5 rounded-full ${activeStep === step.id ? "bg-black" : "bg-gray-400"} transition-all duration-300 ease-in-out`}
           />
@@ -144,19 +169,19 @@ const Services = () => {
 
       {/* Título da seção */}
       <div className="py-12 text-center">
-        <h2 className="text-5xl md:text-6xl font-bold font-sans md:pt-20">
+        <h2 className="text-5xl md:text-6xl font-bold font-sans md:pt-20 text-primeira">
           Serviços
         </h2>
       </div>
 
       {/* Conteúdo das etapas */}
-      <div className="py-12 p-12">
+      <div className="py-12 p-5">
         {steps.map((step) => (
-          <div 
+          <div
             key={step.id}
             className="step-container"
             data-step={step.id}
-            style={{ height: "100vh" }}
+            style={{ height: "120vh" }}
           >
             <div className="flex flex-col md:flex-row mx-auto gap-12 items-center">
               {/* Lado esquerdo (texto) */}
@@ -165,9 +190,8 @@ const Services = () => {
                   <div className="w-10 h-10 md:w-10 md:h-10 rounded-full bg-gray-800 text-white flex items-center justify-center mb-5 text-lg">
                     {step.number}
                   </div>
-                  {/*<h3 className="text-3xl md:text-6xl font-bold mb-4 font-titulo font-bold">{step.title}</h3>*/}
                   <h3
-                    className="text-3xl md:text-6xl font-bold mb-4 font-titulo font-bold"
+                    className="text-3xl md:text-6xl mb-2 md:mb-4 font-titulo font-bold"
                     style={{ color: step.titleColor }}
                   >
                     {step.title.split(' ').map((word, index) =>
@@ -183,9 +207,8 @@ const Services = () => {
                 </div>
 
                 <div className="flex-1 flex flex-col justify-center">
-                  {/*<p className="text-xl leading-relaxed font-descritivo font-regular">{step.description}</p>*/}
-                  <p 
-                    className="text-xl leading-relaxed font-descritivo font-regular"
+                  <p
+                    className="text-md md:text-xl leading-relaxed font-descritivo font-regular"
                     style={{ color: step.descriptionColor }}
                   >
                     {step.description.split(' ').map((word, index) =>
@@ -200,14 +223,17 @@ const Services = () => {
                   </p>
                 </div>
               </div>
-              
+
               {/* Lado direito (imagem) */}
-              <div className="flex-1 flex justify-center items-center">
-                <img 
-                  src={step.image} 
-                  alt={`Etapa ${step.number}`}
-                  className="max-w-full h-auto"
-                />
+
+              <div className="border border-gray-300 shadow-md rounded-lg bg-white flex flex-col items-center text-center h-[40vh] md:h-[70vh] w-full">
+                <div className="flex-1 flex justify-center items-center w-full h-full overflow-hidden p-1">
+                  <img
+                    src={step.image}
+                    alt={`Etapa ${step.number}`}
+                    className="w-full h-full object-fill"
+                  />
+                </div>
               </div>
             </div>
           </div>

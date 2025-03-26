@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useRouter } from 'next/router';
+import { faBars, faBuilding, faCalendarAlt, faCalendarTimes, faChevronDown, faGlobe, faHome, faPhone, faShareAlt, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faHome, faBuilding, faPhone, faCalendarAlt, faCalendarTimes, faComments, faChevronDown, faUsers, faThumbsUp, faShareAlt, faEnvelope, faGlobe, faMoneyCheckDollar } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
+import { useEffect, useRef, useState } from 'react';
 // Instalar npm install primeicons
 // Desinstalar npm uninstall primeicons
 //import 'primeicons/primeicons.css';
@@ -21,7 +21,7 @@ export default function Navbar() {
     { item: 'Sobre nós', path: '#about', icon: faBuilding },
     { item: 'Contato', path: '#contact', icon: faPhone },
     { item: 'Serviços', path: '#services', icon: faCalendarTimes },
-    { item: 'Testimonials', path: '#receber-feedback', icon: faThumbsUp },
+    { item: 'Feedback', path: '#receber-feedback', icon: faThumbsUp },
     { item: 'Dicas', path: '#tips', icon: faShareAlt },
     { item: 'Galeria', path: '/Gallery', icon: faGlobe },
   ];
@@ -41,7 +41,7 @@ export default function Navbar() {
       path: '/ContactSection',
     },
     {
-      title: 'Testimonials',
+      title: 'Feedback',
       icon: faThumbsUp,
       description: 'O que nossos clientes andam falando',
       path: '/Testimonials',
@@ -94,22 +94,22 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className={`p-4 fixed top-0 w-full z-50 text-gray-700'}`} >
+    <header className="p-4 fixed top-0 w-full z-50 text-gray-700 max-w-[1280px]">
       <div className="container flex justify-between h-10 mx-auto w-full">
         <div className="hidden md:flex md:h-10 md:w-40">
           <a href="/"><Image width={40} height={40} src={""} alt="Logo da empresa" /></a>
         </div>
         <div className="hidden lg:flex items-center space-x-3 text-lg">
-          <Link href="/" className="px-4 py-2 hover:bg-[#9b4819] hover:text-white rounded-md flex items-center space-x-2">
+          <Link href="/" className="px-4 py-2 hover:bg-terceira hover:text-white rounded-md flex items-center space-x-2">
             <FontAwesomeIcon icon={faHome} />
             <span>Home</span>
           </Link>
-          <Link href="#quote" className="px-4 py-2 hover:bg-[#9b4819] hover:text-white rounded-md flex items-center space-x-2" onClick={() => handleHashLinkClick('#FormQuote')}>
+          <Link href="#quote" className="px-4 py-2 hover:bg-terceira hover:text-white rounded-md flex items-center space-x-2" onClick={() => handleHashLinkClick('#FormQuote')}>
             <FontAwesomeIcon icon={faCalendarAlt} />
             <span>Orçamento</span>
           </Link>
           <div className="relative" ref={dropdownRef}>
-            <button onClick={handleDropdownToggle} className="px-4 py-2 hover:bg-[#9b4819] hover:text-white rounded-md flex items-center space-x-2">
+            <button onClick={handleDropdownToggle} className="px-4 py-2 hover:bg-terceira hover:text-white rounded-md flex items-center space-x-2">
               <span>Seções</span>
               <FontAwesomeIcon icon={faChevronDown} />
             </button>
@@ -131,12 +131,12 @@ export default function Navbar() {
               </div>
             )}
           </div>
-          
+
         </div>
         <div className="hidden lg:flex items-center">
           <a href="tel:+5511999999999" className="px-4 py-2 bg-terceira hover:text-white text-white rounded-md">Contato +(206) 9999-8888</a>
         </div>
-        <button onClick={toggleMobileMenu} className="lg:hidden p-4 text-gray-800">
+        <button onClick={toggleMobileMenu} className="ml-auto lg:hidden p-4 text-gray-800">
           <FontAwesomeIcon icon={faBars} size="lg" />
         </button>
       </div>
@@ -144,7 +144,7 @@ export default function Navbar() {
       {/* Menu mobile */}
       {isMobileMenuOpen && (
         <div className="fixed inset-0 bg-terceira z-40 flex flex-col lg:hidden text-white">
-          <button onClick={toggleMobileMenu} className="self-end text-[#9b4819] pt-5">
+          <button onClick={toggleMobileMenu} className="self-end text-gray-800 pt-5">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -152,7 +152,7 @@ export default function Navbar() {
               stroke="currentColor"
               className="w-6 h-6"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" className='text-white'/>
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" className='text-white' />
             </svg>
           </button>
 
