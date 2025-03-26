@@ -11,7 +11,7 @@ const Services = () => {
       number: "1",
       title: "Construção Residencial e Comercial",
       description: "Soluções completas de construção para residências e empresas em Seattle, construídas com os mais altos padrões de qualidade.",
-      image: "/assets/Service/imagem.png",
+      image: "/assets/Service/imagem-um.jpg",
       color: "#F3FAEC" // Verde
     },
     {
@@ -62,7 +62,7 @@ const Services = () => {
       number: "7",
       title: "Pintura Interior e Exterior",
       description: "Serviços de pintura profissional para interiores e exteriores, usando produtos de alta qualidade que resistem ao clima úmido de Seattle.",
-      image: "/assets/Service/contrutor-manutencao.jpg",
+      image: "/assets/Service/construtor-manutencao-bloco.jpeg",
       color: "#E6E6FA" // Lavanda
     },
     {

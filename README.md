@@ -15,5 +15,3 @@ Contact Form: A contact page allowing visitors to get in touch with the company 
 About Us Section: Information about the company's history, mission, and values.
 
 Responsive Design: Fully responsive layout to ensure the site looks great on desktops, tablets, and mobile devices.
-
-..
