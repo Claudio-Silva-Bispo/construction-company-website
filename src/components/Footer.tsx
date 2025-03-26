@@ -20,7 +20,8 @@ const Footer: React.FC = () => {
             </li>
           </ul>
         </div>
-        <ul className="flex flex-wrap pl-3 space-x-4 sm:space-x-8">
+
+        <ul className="hidden md:flex flex-wrap pl-3 space-x-4 sm:space-x-8">
           <li>
             <a rel="noopener noreferrer" href="#">Instagram</a>
           </li>
@@ -33,7 +34,7 @@ const Footer: React.FC = () => {
         </ul>
       </div>
 
-      <div className="py-6 text-sm text-center text-gray-600">© 1968 Company Co. All rights reserved.</div>
+      <div className="py-6 text-sm text-center text-gray-600">© 2025 Andrad's. All rights reserved.</div>
     </footer>
   );
 };
