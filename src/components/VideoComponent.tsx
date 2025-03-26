@@ -19,7 +19,7 @@ const VideoComponent: React.FC<VideoComponentProps> = ({ videoSrc, width = "700"
 
   return (
     <div>
-      <video width={width} height={height} controls autoPlay loop muted>
+      <video width={width} height={height} autoPlay loop muted>
         <source src={videoSrc} type="video/mp4" />
         Seu navegador não suporta a tag de vídeo.
       </video>
