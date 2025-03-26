@@ -19,7 +19,7 @@ const Services = () => {
       number: "2",
       title: "Renovação de Propriedades",
       description: "Transforme sua propriedade em Seattle com nossos serviços abrangentes de renovação para espaços internos e externos.",
-      image: "/assets/Service/renovacao-person.jpg",
+      image: "/assets/Service/imagem-dois.jpg",
       color: "#E8F6FA" // Azul
     },
     {
@@ -27,7 +27,7 @@ const Services = () => {
       number: "3",
       title: "Reparos Estruturais",
       description: "Serviços especializados de reparo para danos causados pelo clima único de Seattle, incluindo danos por umidade e adaptações sísmicas.",
-      image: "/assets/Service/reparos-estruturais.jpg",
+      image: "/assets/Service/imagem-tres.jpg",
       color: "#FEF4EB" // Laranja
     },
     {
@@ -54,7 +54,7 @@ const Services = () => {
       number: "6",
       title: "Serviços Elétricos",
       description: "Instalação, reparo e manutenção de sistemas elétricos residenciais e comerciais, garantindo segurança e eficiência energética.",
-      image: "/assets/Service/construtor-manutencao.jpg",
+      image: "/assets/Service/imagem-seis.jpg",
       color: "#FFFACD" // Amarelo claro
     },
     {
@@ -70,7 +70,7 @@ const Services = () => {
       number: "8",
       title: "Lavagem à Pressão",
       description: "Limpeza profunda de superfícies exteriores como calçadas, decks, fachadas e telhados para remover mofo, limo e sujeira acumulada.",
-      image: "/assets/Service/lavando.jpg",
+      image: "/assets/Service/imagem-oito.jpg",
       color: "#F0FFF0" // Verde pastel
     },
     {
