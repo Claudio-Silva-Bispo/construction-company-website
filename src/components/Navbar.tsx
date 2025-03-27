@@ -18,7 +18,7 @@ export default function Navbar() {
 
   const menuItems = [
     { item: 'Home', path: '/', icon: faHome },
-    { item: 'Sobre nós', path: '#about', icon: faBuilding },
+    { item: 'Sobre nós', path: '#about-page', icon: faBuilding },
     { item: 'Contato', path: '#contact', icon: faPhone },
     { item: 'Serviços', path: '#services', icon: faCalendarTimes },
     { item: 'Feedback', path: '#receber-feedback', icon: faThumbsUp },

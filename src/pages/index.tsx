@@ -1,4 +1,6 @@
+import AboutPage from '@/components/AboutPage'
 import Contact from '@/components/Contact'
+import ReceivedFeedbacks from '@/components/ReceivedFeedbacks'
 import Hero from '../components/Hero'
 import Services from '../components/Services'
 
@@ -9,14 +11,8 @@ export default function Home() {
       <Hero />
       <Services />
       <Contact />
-      {/*}
-      <HeroSection/>;
-      HowItWorksSection();
-      UseCasesSection();
-      GallerySection();
-      TestimonialsSection();
-      FAQSection();
-      AnimatedFooterSection();*/}
+      <AboutPage />
+      <ReceivedFeedbacks />
     </div>
 
   )

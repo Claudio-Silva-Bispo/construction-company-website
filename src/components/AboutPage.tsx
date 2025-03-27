@@ -1,156 +1,89 @@
-import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
-
-const images = ["/assets/Service/antes-depois/antes.jpg", "/assets/Service/antes-depois/depois.jpg"];
+import React from "react";
 
 const AboutPage: React.FC = () => {
-  const [linePosition, setLinePosition] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setLinePosition((prevPosition) => (prevPosition + 1) % 101); // A linha vai de 0 a 100
-    }, 70); // Intervalo de tempo para mover a linha aos poucos (40ms)
-
-    return () => clearInterval(interval);
-  }, []);
 
   return (
-    <div className="bg-amber-700 min-h-screen text-white p-5 flex flex-col justify-between text-start">
-      {/* Header */}
-      <div className="max-w-5xl mx-auto w-full pt-16 relative md:flex gap-10">
+    <section className="bg-gray-100 text-gray-800" id="about-page">
+      <div className="container mx-auto flex flex-col p-6">
+        <h2 className="py-4 text-3xl font-bold text-center">Sobre Nossa Empresa</h2>
+        <div className="divide-y divide-gray-300">
+          {/* Informações da Empresa */}
+          <div className="grid justify-center grid-cols-4 p-8 mx-auto space-y-8 lg:space-y-0">
+            <div className="flex items-center justify-center lg:col-span-1 col-span-full">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="w-16 h-16">
+                <path d="M472,16H168a24,24,0,0,0-24,24V344a24,24,0,0,0,24,24H472a24,24,0,0,0,24-24V40A24,24,0,0,0,472,16Zm-8,320H176V48H464Z"></path>
+                <path d="M112,400V80H80V408a24,24,0,0,0,24,24H432V400Z"></path>
+                <path d="M48,464V144H16V472a24,24,0,0,0,24,24H368V464Z"></path>
+              </svg>
+            </div>
 
-        <div className="flex-1">
-          <div className="relative">
-            <h1 className="text-5xl md:text-6xl radley-regular text-[#f4f1e8]">
-              About the <span className="relative z-10">Live Hope</span>
-            </h1>
+            <div className="flex flex-col justify-center max-w-3xl text-center col-span-full lg:col-span-3 lg:text-left">
+              <span className="text-xl font-bold md:text-2xl">Nossa História</span>
+              <span className="mt-4 text-gray-700">
+                Somos uma empresa dedicada à construção, renovação e manutenção de espaços, com anos de experiência transformando sonhos em realidade. Nosso compromisso é com a qualidade e a satisfação do cliente.
+              </span>
+            </div>
           </div>
 
-          {/* Description */}
-          <div className="mt-12 text-2xl space-y-4 sm:max-w-3xl carlito-regular">
-            <p>
-              Live Hope é uma empresa de fotografia apaixonada por capturar
-              momentos com elegância e autenticidade.
-            </p>
-            <p>
-              Nosso foco está em criar imagens minimalistas e sofisticadas,
-              transformando memórias em arte.
-            </p>
-            <p>
-              Com um olhar atento aos detalhes, buscamos transmitir emoção e
-              contar histórias únicas através de cada clique.
-            </p>
-          </div>
-        </div>
+          {/* Forma de Orçamento */}
+          <div className="grid justify-center grid-cols-4 p-8 mx-auto space-y-8 lg:space-y-0">
+            <div className="flex items-center justify-center lg:col-span-1 col-span-full">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="w-16 h-16">
+                <path d="M285.177,179l15.513-3.914-7.827-31.028-15.514,3.913a176.937,176.937,0,0,0-129.3,133.557l-3.407,15.633,31.266,6.814,3.406-15.634A145.559,145.559,0,0,1,285.177,179Z"></path>
+                <path d="M363.624,147.871C343.733,72.077,274.643,16,192.7,16,95.266,16,16,95.266,16,192.7c0,82.617,57,152.163,133.735,171.4A176.769,176.769,0,0,0,320.7,496c97.431,0,176.7-79.266,176.7-176.695C497.392,238.071,441.64,167.336,363.624,147.871ZM48,192.7C48,112.91,112.91,48,192.7,48s144.7,64.91,144.7,144.7-64.911,144.7-144.7,144.7S48,272.481,48,192.7ZM320.7,464c-60.931,0-115.21-38.854-135.843-94.792,2.6.115,5.214.184,7.843.184a176.862,176.862,0,0,0,32.7-3.047l97.625,97.625C322.247,463.983,321.473,464,320.7,464Zm41.528-6.083L260.26,355.954a176.9,176.9,0,0,0,43.662-26.072L408.37,434.33A144.385,144.385,0,0,1,362.223,457.917Zm69.3-45.692L326.851,307.557a177.082,177.082,0,0,0,27.911-44.5L457.67,365.964A144.661,144.661,0,0,1,431.519,412.225Zm33.594-84.073-99.42-99.42a176.785,176.785,0,0,0,3.7-36.036c0-3.285-.1-6.547-.276-9.787a145.054,145.054,0,0,1,96.276,136.4C465.392,322.276,465.291,325.224,465.113,328.152Z"></path>
+              </svg>
+            </div>
 
-        <div className="flex-1">
-          {/* Slider dentro do Header */}
-          <div className="w-full h-[60vh] md:w-[60vh] md:h-[60vh] overflow-hidden relative pt-10 md:pt-0">
-            <div className="relative w-full h-full">
-              {/* Imagem 1 */}
-              <Image
-                src={images[0]}
-                alt="Gallery"
-                layout="fill"
-                objectFit="fill"
-                className="rounded-lg"
-              />
-              {/* A linha que vai cortar a imagem */}
-              <div
-                className="absolute top-0 left-0 h-full"
-                style={{ width: `${linePosition}%` }}
-              ></div>
-              {/* Imagem 2 */}
-              <div
-                className="absolute top-0 left-0 w-full h-full"
-                style={{
-                  clipPath: `inset(0 ${100 - linePosition}% 0 0)` // O corte da imagem 2 vai aumentando com o movimento da linha
-                }}
-              >
-                <Image
-                  src={images[1]}
-                  alt="Gallery"
-                  layout="fill"
-                  objectFit="fill"
-                  className="rounded-lg"
-                />
-              </div>
+            <div className="flex flex-col justify-center max-w-3xl text-center col-span-full lg:col-span-3 lg:text-left">
+              <span className="text-xl font-bold md:text-2xl">Solicitação de Orçamento</span>
+              <span className="mt-4 text-gray-700">
+                Facilitamos o processo de orçamento para você. Solicite uma consulta gratuita através do nosso site ou telefone,sendo a visita presencial ou remota e receba um orçamento personalizado em poucas etapas.
+                Após aprovação do orçamento:
+                <ul className="list-disc list-inside mt-2">
+                  <li>Para serviços gerais: o serviço será executado e o pagamento realizado após a conclusão.</li>
+                  <li>Para construção: será necessário pagar <strong>50%</strong> no início, <strong>30%</strong> antes da finalização da obra, e o restante no término do serviço.</li>
+                </ul>
+              </span>
+            </div>
+          </div>
+
+          {/* Contatos */}
+          <div className="grid justify-center grid-cols-4 p-8 mx-auto space-y-8 lg:space-y-0">
+            <div className="flex items-center justify-center lg:col-span-1 col-span-full">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="w-16 h-16">
+                <path d="M412.284,294.37l-12.5,15.642c-8.354,10.454-50.027,64.208-50.027,95.883,0,36.451,28.049,66.105,62.526,66.105s62.527-29.654,62.527-66.105c0-31.675-41.673-85.429-50.028-95.883Zm0,145.63c-16.832,0-30.526-15.3-30.526-34.105,0-11.662,15.485-37.883,30.531-59.2,15.043,21.3,30.522,47.509,30.522,59.2C442.811,424.7,429.116,440,412.284,440Z"></path>
+                <path d="M122.669,51.492,96.133,124.4,30.092,97.205,17.908,126.8l67.271,27.7L26.9,314.606a48.056,48.056,0,0,0,28.689,61.523l184.719,67.232a48,48,0,0,0,61.523-28.688L397.6,151.56Zm149.1,352.236a16,16,0,0,1-20.508,9.563L66.537,346.059a16,16,0,0,1-9.563-20.507L73.553,280H316.8ZM85.2,248l29.594-81.311,36.333,14.961a32.644,32.644,0,1,0,11.236-29.98l-36.615-15.077,16.046-44.085,214.79,78.177L328,249.219V248Z"></path>
+              </svg>
+            </div>
+            <div className="flex flex-col justify-center max-w-3xl text-center col-span-full lg:col-span-3 lg:text-left">
+              <span className="text-xl font-bold md:text-2xl">Entre em Contato</span>
+              <span className="mt-4 text-gray-700">
+                Estamos disponíveis para esclarecer suas dúvidas e oferecer suporte. Entre em contato conosco via telefone, e-mail ou redes sociais. Nossa equipe está pronta para ajudar!
+              </span>
+            </div>
+          </div>
+
+          {/* Qualidade dos Serviços */}
+          <div className="grid justify-center grid-cols-4 p-8 mx-auto space-y-8 lg:space-y-0">
+            <div className="flex items-center justify-center lg:col-span-1 col-span-full">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="w-16 h-16">
+                <polygon points="388.632 393.82 495.823 255.94 388.684 118.178 363.424 137.822 455.288 255.944 363.368 374.18 388.632 393.82"></polygon>
+                <polygon points="148.579 374.181 56.712 255.999 148.629 137.823 123.371 118.177 16.177 255.993 123.314 393.819 148.579 374.181"></polygon>
+                <polygon points="330.529 16 297.559 16 178.441 496 211.412 496 330.529 16"></polygon>
+              </svg>
+            </div>
+            <div className="flex flex-col justify-center max-w-3xl text-center col-span-full lg:col-span-3 lg:text-left">
+              <span className="text-xl font-bold md:text-2xl">Qualidade Garantida</span>
+              <span className="mt-4 text-gray-700">
+                Utilizamos os melhores materiais e as práticas mais avançadas do mercado para garantir serviços de alta qualidade. A sua satisfação é a nossa prioridade!
+              </span>
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-      {/* Divider */}
-      <div className="max-w-6xl mx-auto w-full my-5">
-        <hr className="border-[#f4f1e8]" />
-      </div>
 
-      {/* Footer */}
-      <div className="max-w-4xl mx-auto w-full flex flex-col md:flex-row justify-between">
-        {/* Social Media */}
-        <div>
-          <p className="uppercase tracking-wide mb-4">
-            To see more of my work, visit my socials:
-          </p>
-          <div className="flex items-center gap-4">
-            <a href="#" className="text-white hover:text-white/80">
-              <FaFacebook size={28} />
-            </a>
-            <a href="#" className="text-white hover:text-white/80">
-              <FaInstagram size={28} />
-            </a>
-            <a href="#" className="text-white hover:text-white/80">
-              <FaTwitter size={28} />
-            </a>
-            <span className="ml-2 text-lg italic">@reallygreatsite</span>
-          </div>
-        </div>
-
-        {/* Contact Info */}
-        <div className="mt-8 md:mt-0">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center">
-              <div className="text-amber-700">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="currentColor"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.708 2.825L15 11.105V5.383zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741zM1 11.105l4.708-2.897L1 5.383v5.722z" />
-                </svg>
-              </div>
-            </div>
-            <div>
-              <p className="uppercase tracking-wide text-sm">EMAIL</p>
-              <p className="text-lg">livehopephotography.com</p>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-4">
-            <div className="w-9 h-8 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center">
-              <div className="text-amber-700">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="currentColor"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
-                </svg>
-              </div>
-            </div>
-            <div>
-              <p className="uppercase tracking-wide text-sm">PHONE</p>
-              <p className="text-lg ">+ (425) 588-6654</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   );
 };
 

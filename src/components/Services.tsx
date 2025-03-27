@@ -156,6 +156,7 @@ const Services = () => {
 
   return (
     <div
+      id="services"
       ref={sectionRef}
       className={`min-h-screen w-full overflow-x-hidden transition-all duration-800 ease-in-out`}
       style={{ backgroundColor: getActiveColor() }}

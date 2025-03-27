@@ -2,7 +2,7 @@
 export default function Contact() {
     return (
 
-        <section className=" bg-primeira text-white h-[100vh] md:h-auto md:pb-10 flex flex-col md:flex-row justify-center items-center md:grid-cols-2 md:divide-x">
+        <section id="contact" className=" bg-primeira text-white h-[100vh] md:h-auto md:pb-10 flex flex-col md:flex-row justify-center items-start md:grid-cols-2 md:divide-x">
             <form className="container w-full max-w-xl p-4 mx-auto space-y-6 rounded-md shadow bg-primeira">
                 <h2 className="w-full text-3xl font-bold leading-tight pt-5">Contact us</h2>
                 <div>
