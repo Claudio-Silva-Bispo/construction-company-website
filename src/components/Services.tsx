@@ -232,7 +232,7 @@ const Services = () => {
 
               {/* Lado direito (imagem) */}
 
-              <div className="border border-gray-300 shadow-md rounded-lg bg-white flex flex-col items-center text-center h-[40vh] md:h-[70vh] w-full">
+              <div className="border border-gray-300 shadow-md rounded-lg bg-white flex flex-col items-center text-center h-[50vh] md:h-[70vh] w-full">
                 <div className="flex-1 flex justify-center items-center w-full h-full overflow-hidden p-1">
                   <img
                     src={step.image[currentSlide]}
