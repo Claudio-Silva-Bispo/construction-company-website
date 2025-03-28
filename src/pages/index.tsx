@@ -1,6 +1,7 @@
+import Main from '@/components/Main'
 import AboutPage from '@/components/AboutPage'
 import Contact from '@/components/Contact'
-import ReceivedFeedbacks from '@/components/ReceivedFeedbacks'
+import Feedback from '@/components/Feedback'
 import Hero from '../components/Hero'
 import Services from '../components/Services'
 
@@ -8,11 +9,12 @@ export default function Home() {
 
   return (
     <div>
-      <Hero />
+      <Main />
+      {/*<Hero />*/}
       <Services />
       <Contact />
       <AboutPage />
-      <ReceivedFeedbacks />
+      <Feedback />
     </div>
 
   )

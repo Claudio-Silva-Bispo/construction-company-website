@@ -10,7 +10,7 @@ const feedbacks = [
 ];
 
 
-export default function ReceberFeedbacks() {
+export default function Feedback() {
     const [feedbackAtivo, setFeedbackAtivo] = useState(0);
     const [sliderValue, setSliderValue] = useState(50);
     const sliderRef = useRef<HTMLDivElement>(null);
@@ -29,7 +29,7 @@ export default function ReceberFeedbacks() {
     };
 
     return (
-        <section className='feedback-background min-h-[70vh] flex flex-col md:flex-row justify-between items-center px-4 md:px-8 lg:px-16 bg-terceira' id='received-feedback' style={{
+        <section className='feedback-background min-h-[70vh] flex flex-col md:flex-row justify-between items-center px-4 md:px-8 lg:px-16 bg-terceira' id='feedback' style={{
             backgroundSize: 'cover',
             backgroundPosition: 'center'
         }}>
@@ -38,7 +38,7 @@ export default function ReceberFeedbacks() {
                 <div className="text-center md:text-left before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto md:before:mx-0 before:bg-white pt-10 md:pt-0 flex flex-col gap-3">
                     <h3 className="text-4xl md:text-5xl text-white mb-5 md:mb-0 text-center md:text-left font-bold">Qualidade & entrega</h3>
 
-                    <span className="text-md md:text-lg tracking-wider text-quinta max-w-md mx-auto md:mx-0 text-center md:text-left">
+                    <span className="text-md md:text-lg tracking-wider text-white max-w-md mx-auto md:mx-0 text-center md:text-left">
                         Veja o que as pessoas estão dizendo sobre os nossos serviços de reparos e construções e como conseguimos entregar os serviços com qualidade.
                     </span>
                 </div>
@@ -48,7 +48,7 @@ export default function ReceberFeedbacks() {
                 </p>
 
                 <div className='grid md:flex gap-5'>
-                    <button type="button" className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 bg-primeira text-gray-50 focus:ring-white hover:ring-white"><a href="/Gallery">Galeria serviços</a></button>
+                    <button type="button" className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 bg-primeira text-gray-50 focus:ring-white hover:ring-white "><a href="/Gallery">Galeria de serviços</a></button>
 
                     <button type="button" className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 bg-primeira text-gray-50 focus:ring-white hover:ring-white"><a href="#contact">Orçamento grátis</a></button>
                 </div>

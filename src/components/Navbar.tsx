@@ -21,7 +21,7 @@ export default function Navbar() {
     { item: 'Sobre nós', path: '#about-page', icon: faBuilding },
     { item: 'Contato', path: '#contact', icon: faPhone },
     { item: 'Serviços', path: '#services', icon: faCalendarTimes },
-    { item: 'Feedback', path: '#receber-feedback', icon: faThumbsUp },
+    { item: 'Feedback', path: '#feedback', icon: faThumbsUp },
     { item: 'Dicas', path: '#tips', icon: faShareAlt },
     { item: 'Galeria', path: '/Gallery', icon: faGlobe },
   ];
@@ -94,7 +94,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="p-4 fixed top-0 w-full z-50 text-gray-700 max-w-[1280px]">
+    <header className="p-4 fixed top-0 w-full z-50 text-gray-700 max-w-[1240px]">
       <div className="container flex justify-between h-10 mx-auto w-full">
         <div className="hidden md:flex md:h-10 md:w-40">
           <a href="/"><Image width={40} height={40} src={""} alt="Logo da empresa" /></a>
