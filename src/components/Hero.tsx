@@ -1,53 +1,65 @@
-import { useEffect, useState } from "react";
-import VideoComponent from "./VideoComponent";
-
 export default function Hero() {
-  const [linePosition, setLinePosition] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setLinePosition((prevPosition) => (prevPosition + 1) % 101);
-    }, 70);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <main className="bg-white max-h-screen h-[100vh] p-5 md:mb-60 md:pt-40">
-      <section className="bg-[url('/assets/hero/background.svg')] flex flex-col md:flex-row h-full w-full">
-        <div className="max-w-lg mx-auto transform lg:flex-grow">
-          <h1 className="relative flex flex-col mb-2 leading-[88px] text-[80px] z-10">
-            <span className="relative inline-flex w-fit">
-              <span className="relative pt-10 md:pt-20 text-2xl md:text-5xl text-terceira font-titulo font-bold">Transformando Espaços</span>
-              <span className="absolute top-0 left-0 w-full h-full px-[10px] -ml-[10px] overflow-hidden">
-                <span className="absolute top-0 right-[100%] h-full w-full bg-[#1ac6ff] opacity-20 z-[-1]"></span>
-              </span>
-            </span>
-            <span className="relative inline-flex w-fit">
-              <span className="relative text-2xl md:text-2xl font-titulo font-bold text-terceira">de Sonhos em Realidade</span>
-              <span className="absolute top-0 left-0 w-full h-full px-[10px] -ml-[10px] overflow-hidden">
-                <span className="absolute top-0 right-[100%] h-full w-full bg-[#1ac6ff] opacity-20 z-[-1]"></span>
-              </span>
-            </span>
-          </h1>
-          <h2 className="text-md md:text-2xl leading-6 mb-5 md:mb-10 pt-3 md:pt-10 text-segunda font-descritivo font-regular">
-            Oferecemos serviços especializados de construção, incluindo pequenos reparos, reformas e pintura, para transformar sua visão em realidade.
-          </h2>
+    <main className="max-h-screen h-[100vh] relative flex flex-col justify-between items-center" id="hero">
+      {/* Imagem de fundo */}
+      <section className="bg-[url('/assets/hero/background.png')] bg-no-repeat bg-cover bg-center h-full w-full absolute inset-0"></section>
 
-          <div className="w-full">
-            <a
-              href="#"
-              className="bg-primeira text-white px-8 py-4 rounded-lg text-md md:text-xl font-semibold"
-            >
-              Entre em contato
-            </a>
+      {/* Conteúdo centralizado */}
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+        <div className="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between">
+          <div className="flex items-center md:items-center max-w-2xl">
+            
+            <div className="hidden md:flex relative md:left-[-90px]">
+              <img
+                src="/assets/hero/logo-sem-fundo.png"
+                alt="Logo"
+                className="hidden md:block w-80"
+              />
+            </div>
+
+            <div className="relative flex flex-col justify-center leading-none md:left-[-120px]">
+              <h1 className="text-white text-7xl md:text-8xl font-titulo drop-shadow-lg">
+                Andrad's
+              </h1>
+              <p className="text-white text-lg md:text-lg lg:text-xl drop-shadow font-titulo font-light uppercase tracking-wide pl-2">
+                Power & Build Solutions
+              </p>
+            </div>
+
           </div>
         </div>
 
-        <div className="flex md:justify-center md:items-center w-full pt-10 md:pt-0">
-          <VideoComponent videoSrc="/assets/GIF/video-construcao-casa-melhorada.mp4" />
+        <p className="text-white text-lg md:text-xl max-w-2xl text-left md:text-justify md:text-center mt-4 pt-4 md:pt-0 font-descritivo">
+          Somos especialistas em construção civil, oferecendo serviços de alta qualidade para reformas, 
+          pequenos reparos e pintura. Nossa equipe dedicada trabalha para transformar espaços, 
+          garantindo soluções eficientes e personalizadas que atendem às suas necessidades.
+        </p>
+
+        {/* Botão responsivo */}
+        <div className="w-full md:w-auto flex justify-center mt-4 gap-5">
+          <a
+            href="#"
+            className="bg-[#d7a647] text-white px-8 py-4 rounded-lg text-md md:text-xl font-semibold w-full md:w-auto text-center"
+          >
+            Entre em contato
+          </a>
+          <a
+            href="#"
+            className="hidden md:flex bg-[#d7a647] text-white px-8 py-4 rounded-lg text-md md:text-xl font-semibold w-full md:w-auto text-center"
+          >
+            Orçamento Grátis
+          </a>
         </div>
-      </section>
+      </div>
+
+      {/* Logo separado para telas menores (sm) */}
+      <div className="relative z-10 pb-8 md:hidden">
+        <img
+          src="/assets/hero/logo-sem-fundo.png"
+          alt="Logo"
+          className="w-64"
+        />
+      </div>
     </main>
   );
 }

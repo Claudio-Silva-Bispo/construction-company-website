@@ -15,6 +15,7 @@ export default function Navbar() {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const [activeHash, setActiveHash] = useState('');
   const router = useRouter();
+  const heroRef = useRef<HTMLElement | null>(null);
 
   const menuItems = [
     { item: 'Home', path: '/', icon: faHome },
@@ -93,11 +94,31 @@ export default function Navbar() {
     };
   }, []);
 
+  useEffect(() => {
+    const heroSection = document.getElementById('hero');
+    heroRef.current = heroSection;
+
+    if (!heroSection) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsHeroVisible(entry.isIntersecting);
+      },
+      { root: null, threshold: 0.3 } // Visível em pelo menos 30% da tela
+    );
+
+    observer.observe(heroSection);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <header className="p-4 fixed top-0 w-full z-50 text-gray-700 max-w-[1240px]">
       <div className="container flex justify-between h-10 mx-auto w-full">
         <div className="hidden md:flex md:h-10 md:w-40">
-          <a href="/"><Image width={40} height={40} src={""} alt="Logo da empresa" /></a>
+          <a href="/"><Image width={200} height={40} src={"/assets/logo/logo-fundo-Photoroom.png"} alt="Logo da empresa" /></a>
         </div>
         <div className="hidden lg:flex items-center space-x-3 text-lg">
           <Link href="/" className="px-4 py-2 hover:bg-terceira hover:text-white rounded-md flex items-center space-x-2">
@@ -136,7 +157,10 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center">
           <a href="tel:+5511999999999" className="px-4 py-2 bg-terceira hover:text-white text-white rounded-md">Contato +(206) 9999-8888</a>
         </div>
-        <button onClick={toggleMobileMenu} className="ml-auto lg:hidden p-4 text-gray-800">
+          <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className={`ml-auto lg:hidden p-4 ${isHeroVisible ? 'text-white' : 'text-gray-800'}`}
+        >
           <FontAwesomeIcon icon={faBars} size="lg" />
         </button>
       </div>
@@ -144,7 +168,7 @@ export default function Navbar() {
       {/* Menu mobile */}
       {isMobileMenuOpen && (
         <div className="fixed inset-0 bg-terceira z-40 flex flex-col lg:hidden text-white">
-          <button onClick={toggleMobileMenu} className="self-end text-gray-800 pt-5">
+          <button onClick={toggleMobileMenu} className="self-end text-gray-800 pt-5 p-5">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -168,7 +192,7 @@ export default function Navbar() {
           </ul>
 
           <div className="mt-auto p-5 w-full m:flex m:justify-center hidden">
-            <Image width={100} height={100} src={""} alt="Logo da empresa" className="w-44 h-auto hidden" />
+            <Image width={100} height={100} src={"/assets/hero/logo-sem-fundo.png"} alt="Logo da empresa" className="w-44 h-auto hidden" />
           </div>
         </div>
       )}

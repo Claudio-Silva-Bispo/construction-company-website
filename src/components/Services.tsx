@@ -13,7 +13,7 @@ const Services = () => {
       title: "Construção Residencial e Comercial",
       description: "Soluções completas de construção para residências e empresas em Seattle, construídas com os mais altos padrões de qualidade.",
       image: ['/assets/Service/residencial-comercial/imagem-um.jpg', '/assets/Service/residencial-comercial/imagem2.jpg', '/assets/Service/residencial-comercial/imagem3.jpg'],
-      color: "#F3FAEC" // Verde
+      color: "#d7a647" //"#F3FAEC" // Verde
     },
     {
       id: "renovation",
@@ -21,7 +21,7 @@ const Services = () => {
       title: "Renovação de Propriedades",
       description: "Transforme sua propriedade em Seattle com nossos serviços abrangentes de renovação para espaços internos e externos.",
       image: ['/assets/Service/renovacao-residencial/imagem1.jpg', '/assets/Service/renovacao-residencial/imagem2.jpg', '/assets/Service/renovacao-residencial/imagem3.jpg'],
-      color: "#E8F6FA" // Azul
+      color: "#fae9bd" //"#E8F6FA" // Azul
     },
     {
       id: "repair",
@@ -48,7 +48,7 @@ const Services = () => {
       title: "Instalação e Reparo de Pisos",
       description: "Serviços completos de instalação, reparo e manutenção de pisos para todos os tipos de superfícies, incluindo madeira, laminado, cerâmica e pedra natural.",
       image: ['/assets/Service/piso/imagem1.jpg', '/assets/Service/piso/imagem2.jpg', '/assets/Service/piso/imagem3.jpg'],
-      color: "#F0F8FF" // Azul claro
+      color: "#E8F6FA" //"#F0F8FF" // Azul claro
     },
     {
       id: "electrical",
