@@ -1,13 +1,19 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 const feedbacks = [
-    "Os reparos realizados em minha residência foram excelentes! A equipe foi extremamente profissional e eficiente, entregando um serviço de alta qualidade. Super recomendo!",
-    "Contratei os serviços de construção da empresa para minha nova loja comercial, e fiquei muito satisfeito com o resultado. Desde o início do projeto até a entrega, tudo foi feito com perfeição e atenção aos detalhes.",
-    "Tive uma experiência incrível com os serviços de reforma. Eles transformaram completamente meu escritório, deixando o espaço moderno e funcional. A equipe foi muito atenciosa e cumpriu os prazos.",
-    "A manutenção feita em minha casa foi impecável! Resolveram problemas que outras empresas nunca conseguiram. Estou impressionado com a qualidade do serviço e o suporte prestado.",
-    "Contratei a empresa para construir uma nova área em nosso espaço comercial, e fiquei impressionado com a organização e o profissionalismo da equipe. Cumpriram todos os prazos e entregaram exatamente o que prometemos aos nossos clientes. Não poderia estar mais satisfeito!",
-    "Os reparos em minha residência foram realizados com rapidez e eficiência. A equipe foi muito educada e prestativa, garantindo que tudo fosse feito com cuidado e atenção aos detalhes. Com certeza voltarei a contratar os serviços!"
+    "The repairs at my home were outstanding! The team was highly professional and efficient, delivering top-quality service. Highly recommend them!",
+    "I hired the company for my new store's construction, and the result exceeded my expectations. From project start to finish, everything was done with great attention to detail.",
+    "I had an amazing experience with the renovation. They transformed my office completely, making it modern and functional. The team was attentive and met all deadlines.",
+    "The maintenance at my house was flawless! They resolved issues that others couldn't. I'm impressed by the service quality and the support they offered.",
+    "I hired the company to build a new area for our business, and I was impressed with the teams organization and professionalism. They met deadlines and delivered exactly what was promised.",
+    "The repairs at my home were done quickly and efficiently. The team was polite and careful, ensuring everything was done with attention to detail. I ll definitely hire them again!",
+    "The floor installation was done with precision. The team ensured everything was aligned and completed quickly. The results are stunning, and I highly recommend them.",
+    "Im impressed with the floor installation service. The team worked efficiently, ensuring that every tile was perfectly placed. The quality of work exceeded my expectations.",
+    "The cleaning service was thorough and professional. They did an excellent job removing all dirt and stains, leaving the place looking spotless and fresh. Highly satisfied.",
+    "The floor installation team was fantastic! They worked meticulously to ensure everything was perfectly installed, and the space looks amazing. Very happy with the outcome."
 ];
+
+
 
 
 export default function Feedback() {
@@ -35,11 +41,11 @@ export default function Feedback() {
         }}>
             {/* Left side - Feedbacks */}
             <div className="w-full md:w-1/2 flex flex-col gap-10 py-16 md:py-20">
-                <div className="text-center md:text-left before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto md:before:mx-0 before:bg-white pt-10 md:pt-0 flex flex-col gap-3">
-                    <h3 className="text-4xl md:text-5xl text-white mb-5 md:mb-0 text-center md:text-left font-bold">Qualidade & entrega</h3>
+                <div className="text-center md:text-left before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto md:before:mx-0 before:bg-[#d7a647] pt-10 md:pt-0 flex flex-col gap-3">
+                    <h3 className="text-4xl md:text-5xl text-white mb-5 md:mb-0 text-center md:text-left font-bold">Quality & Delivery</h3>
 
                     <span className="text-md md:text-lg tracking-wider text-white max-w-md mx-auto md:mx-0 text-center md:text-left">
-                        Veja o que as pessoas estão dizendo sobre os nossos serviços de reparos e construções e como conseguimos entregar os serviços com qualidade.
+                        See what people are saying about our repair and construction services and how we deliver quality results.
                     </span>
                 </div>
 
@@ -48,9 +54,9 @@ export default function Feedback() {
                 </p>
 
                 <div className='grid md:flex gap-5'>
-                    <button type="button" className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 bg-primeira text-gray-50 focus:ring-white hover:ring-white "><a href="/Gallery">Galeria de serviços</a></button>
+                    <button type="button" className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 bg-primeira text-gray-50 focus:ring-white hover:ring-white "><a href="/Gallery">Service Gallery</a></button>
 
-                    <button type="button" className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 bg-primeira text-gray-50 focus:ring-white hover:ring-white"><a href="#contact">Orçamento grátis</a></button>
+                    <button type="button" className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 bg-primeira text-gray-50 focus:ring-white hover:ring-white"><a href="#contact">Free Estimate</a></button>
                 </div>
             </div>
 

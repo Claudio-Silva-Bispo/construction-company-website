@@ -5,7 +5,7 @@ const AboutPage: React.FC = () => {
   return (
     <section className="bg-gray-100 text-gray-800" id="about-page">
       <div className="container mx-auto flex flex-col p-6">
-        <h2 className="py-4 text-3xl font-bold text-center">Sobre Nossa Empresa</h2>
+        <h2 className="py-4 text-3xl font-bold text-center">About Our Company</h2>
         <div className="divide-y divide-gray-300">
           {/* Informações da Empresa */}
           <div className="grid justify-center grid-cols-4 p-8 mx-auto space-y-8 lg:space-y-0">
@@ -18,9 +18,9 @@ const AboutPage: React.FC = () => {
             </div>
 
             <div className="flex flex-col justify-center max-w-3xl text-center col-span-full lg:col-span-3 lg:text-left">
-              <span className="text-xl font-bold md:text-2xl">Nossa História</span>
+              <span className="text-xl font-bold md:text-2xl">Our History</span>
               <span className="mt-4 text-gray-700">
-                Somos uma empresa dedicada à construção, renovação e manutenção de espaços, com anos de experiência transformando sonhos em realidade. Nosso compromisso é com a qualidade e a satisfação do cliente.
+              We are a company dedicated to construction, renovation, and maintenance of spaces, with years of experience turning dreams into reality. Our commitment is to quality and customer satisfaction.
               </span>
             </div>
           </div>
@@ -35,13 +35,13 @@ const AboutPage: React.FC = () => {
             </div>
 
             <div className="flex flex-col justify-center max-w-3xl text-center col-span-full lg:col-span-3 lg:text-left">
-              <span className="text-xl font-bold md:text-2xl">Solicitação de Orçamento</span>
+              <span className="text-xl font-bold md:text-2xl">Request a Quote</span>
               <span className="mt-4 text-gray-700">
-                Facilitamos o processo de orçamento para você. Solicite uma consulta gratuita através do nosso site ou telefone,sendo a visita presencial ou remota e receba um orçamento personalizado em poucas etapas.
-                Após aprovação do orçamento:
+                We make the quoting process easy for you. Request a free consultation through our website or by phone, whether in-person or remote, and receive a personalized quote in just a few steps.
+                Once the quote is approved:
                 <ul className="list-disc list-inside mt-2">
-                  <li>Para serviços gerais: o serviço será executado e o pagamento realizado após a conclusão.</li>
-                  <li>Para construção: será necessário pagar <strong>50%</strong> no início, <strong>30%</strong> antes da finalização da obra, e o restante no término do serviço.</li>
+                  <li>For general services: the service will be performed, and payment will be made upon completion.</li>
+                  <li>For construction: a payment of <strong>50%</strong> will be required at the start, <strong>30%</strong> before the completion of the work, and the remaining balance upon finalizing the service.</li>
                 </ul>
               </span>
             </div>
@@ -56,9 +56,9 @@ const AboutPage: React.FC = () => {
               </svg>
             </div>
             <div className="flex flex-col justify-center max-w-3xl text-center col-span-full lg:col-span-3 lg:text-left">
-              <span className="text-xl font-bold md:text-2xl">Entre em Contato</span>
+              <span className="text-xl font-bold md:text-2xl">Get in Touch</span>
               <span className="mt-4 text-gray-700">
-                Estamos disponíveis para esclarecer suas dúvidas e oferecer suporte. Entre em contato conosco via telefone, e-mail ou redes sociais. Nossa equipe está pronta para ajudar!
+                We are available to answer your questions and provide support. Contact us via phone, email, or social media. Our team is ready to help!
               </span>
             </div>
           </div>
@@ -73,9 +73,9 @@ const AboutPage: React.FC = () => {
               </svg>
             </div>
             <div className="flex flex-col justify-center max-w-3xl text-center col-span-full lg:col-span-3 lg:text-left">
-              <span className="text-xl font-bold md:text-2xl">Qualidade Garantida</span>
+              <span className="text-xl font-bold md:text-2xl">Quality Guaranteed</span>
               <span className="mt-4 text-gray-700">
-                Utilizamos os melhores materiais e as práticas mais avançadas do mercado para garantir serviços de alta qualidade. A sua satisfação é a nossa prioridade!
+                We use the best materials and the most advanced practices in the market to ensure high-quality services. Your satisfaction is our priority!
               </span>
             </div>
           </div>

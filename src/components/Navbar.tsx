@@ -19,20 +19,18 @@ export default function Navbar() {
 
   const menuItems = [
     { item: 'Home', path: '/', icon: faHome },
-    { item: 'Sobre nós', path: '#about-page', icon: faBuilding },
-    { item: 'Contato', path: '#contact', icon: faPhone },
-    { item: 'Serviços', path: '#services', icon: faCalendarTimes },
+    { item: 'About Us', path: '#about-page', icon: faBuilding },
+    { item: 'Contact', path: '#contact', icon: faPhone },
+    { item: 'Services', path: '#services', icon: faCalendarTimes },
     { item: 'Feedback', path: '#feedback', icon: faThumbsUp },
-    { item: 'Dicas', path: '#tips', icon: faShareAlt },
-    { item: 'Galeria', path: '/Gallery', icon: faGlobe },
+    { item: 'Gallery', path: '/Gallery', icon: faGlobe },
   ];
 
   const sections = [
-
     {
       title: 'Sobre nós',
       icon: faBuilding,
-      description: 'Aprenda mais sobre nós',
+      description: 'About our company',
       path: '/AboutCompany',
     },
     {
@@ -42,15 +40,9 @@ export default function Navbar() {
       path: '/ContactSection',
     },
     {
-      title: 'Feedback',
-      icon: faThumbsUp,
-      description: 'O que nossos clientes andam falando',
-      path: '/Testimonials',
-    },
-    {
-      title: 'Galeria Personalizada',
+      title: 'Galeria',
       icon: faGlobe,
-      description: 'Fotos dos principais serviços',
+      description: 'Principais serviços',
       path: '/Gallery',
     },
   ];
@@ -135,7 +127,7 @@ export default function Navbar() {
               <FontAwesomeIcon icon={faChevronDown} />
             </button>
             {isDropdownOpen && (
-              <div className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-[80vw] bg-white shadow-lg rounded-md z-50">
+              <div className="absolute left-[-50px] transform -translate-x-1/2 mt-2 w-[80vw] xl:w-[60vw] bg-white shadow-lg rounded-md z-50">
                 <div className="grid grid-cols-3 gap-4 p-4">
                   {sections.map((section) => (
                     <Link key={section.title} href={section.path} className="flex items-start space-x-3 p-2 hover:bg-gray-100 rounded-md" onClick={() => handleHashLinkClick(section.path)}>
@@ -191,8 +183,25 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <div className="mt-auto p-5 w-full m:flex m:justify-center hidden">
-            <Image width={100} height={100} src={"/assets/hero/logo-sem-fundo.png"} alt="Logo da empresa" className="w-44 h-auto hidden" />
+          <div className="flex flex-col items-center md:items-center max-w-2xl">
+            
+            <div>
+              <img
+                src="/assets/Logo/logo-sem-fundo-dois.png"
+                alt="Logo"
+                className="w-64"
+              />
+            </div>
+
+            <div className="flex flex-col justify-center leading-none">
+              <h1 className="text-white text-7xl md:text-8xl font-titulo drop-shadow-lg">
+                Andrad's
+              </h1>
+              <p className="text-white text-lg md:text-lg lg:text-xl drop-shadow font-titulo font-light uppercase tracking-wide pl-6">
+                Power & Build Solutions
+              </p>
+            </div>
+
           </div>
         </div>
       )}

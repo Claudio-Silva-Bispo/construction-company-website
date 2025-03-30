@@ -10,32 +10,32 @@ const Services = () => {
     {
       id: "construction",
       number: "1",
-      title: "Construção Residencial e Comercial",
-      description: "Soluções completas de construção para residências e empresas em Seattle, construídas com os mais altos padrões de qualidade.",
+      title: "Residential and Commercial Construction",
+      description: "Complete construction solutions for homes and businesses in Seattle, built to the highest quality standards.",
       image: ['/assets/Service/residencial-comercial/imagem-um.jpg', '/assets/Service/residencial-comercial/imagem2.jpg', '/assets/Service/residencial-comercial/imagem3.jpg'],
       color: "#d7a647" //"#F3FAEC" // Verde
     },
     {
       id: "renovation",
       number: "2",
-      title: "Renovação de Propriedades",
-      description: "Transforme sua propriedade em Seattle com nossos serviços abrangentes de renovação para espaços internos e externos.",
+      title: "Property Renovation",
+      description: "Transform your Seattle property with our comprehensive renovation services for both indoor and outdoor spaces.",
       image: ['/assets/Service/renovacao-residencial/imagem1.jpg', '/assets/Service/renovacao-residencial/imagem2.jpg', '/assets/Service/renovacao-residencial/imagem3.jpg'],
       color: "#fae9bd" //"#E8F6FA" // Azul
     },
     {
       id: "repair",
       number: "3",
-      title: "Reparos Estruturais",
-      description: "Serviços especializados de reparo para danos causados pelo clima único de Seattle, incluindo danos por umidade e adaptações sísmicas.",
+      title: "Structural Repairs",
+      description: "Specialized repair services for damage caused by Seattle's unique climate, including moisture damage and seismic adaptations.",
       image: ['/assets/Service/reparo-estrutural/imagem1.jpg', '/assets/Service/reparo-estrutural/imagem2.jpg', '/assets/Service/reparo-estrutural/imagem3.jpg'],
       color: "#FEF4EB" // Laranja
     },
     {
       id: "maintenance",
       number: "4",
-      title: "Manutenção Preventiva",
-      description: "Programas regulares de manutenção para proteger seu investimento imobiliário em Seattle e prevenir reparos custosos no futuro.",
+      title: "Preventive Maintenance",
+      description: "Regular maintenance programs to protect your real estate investment in Seattle and prevent costly repairs in the future.",
       image: ['/assets/Service/manutencao/imagem1.jpg', '/assets/Service/manutencao/imagem2.jpg', '/assets/Service/manutencao/imagem3.jpg'],
       color: "#0C1D37", // Azul escuro
       titleColor: "#fff",
@@ -45,42 +45,34 @@ const Services = () => {
     {
       id: "floor",
       number: "5",
-      title: "Instalação e Reparo de Pisos",
-      description: "Serviços completos de instalação, reparo e manutenção de pisos para todos os tipos de superfícies, incluindo madeira, laminado, cerâmica e pedra natural.",
+      title: "Floor Installation and Repair",
+      description: "Comprehensive floor installation, repair, and maintenance services for all types of surfaces, including wood, laminate, ceramic, and natural stone.",
       image: ['/assets/Service/piso/imagem1.jpg', '/assets/Service/piso/imagem2.jpg', '/assets/Service/piso/imagem3.jpg'],
       color: "#E8F6FA" //"#F0F8FF" // Azul claro
     },
     {
-      id: "electrical",
-      number: "6",
-      title: "Serviços Elétricos",
-      description: "Instalação, reparo e manutenção de sistemas elétricos residenciais e comerciais, garantindo segurança e eficiência energética.",
-      image: ['/assets/Service/eletrica/imagem1.jpg', '/assets/Service/eletrica/imagem2.jpg', '/assets/Service/eletrica/imagem3.jpg'],
-      color: "#FFFACD" // Amarelo claro
-    },
-    {
       id: "painting",
-      number: "7",
-      title: "Pintura Interior e Exterior",
-      description: "Serviços de pintura profissional para interiores e exteriores, usando produtos de alta qualidade que resistem ao clima úmido de Seattle.",
+      number: "6",
+      title: "Interior and Exterior Painting",
+      description: "Professional painting services for interiors and exteriors, using high-quality products that withstand Seattle's humid climate.",
       image: ['/assets/Service/pinturas/imagem1.jpg', '/assets/Service/pinturas/imagem2.jpg', '/assets/Service/pinturas/imagem3.jpg'],
       color: "#E6E6FA" // Lavanda
     },
     {
       id: "pressure",
-      number: "8",
-      title: "Lavagem à Pressão",
-      description: "Limpeza profunda de superfícies exteriores como calçadas, decks, fachadas e telhados para remover mofo, limo e sujeira acumulada.",
+      number: "7",
+      title: "Pressure Washing",
+      description: "Deep cleaning of exterior surfaces such as sidewalks, decks, façades, and roofs to remove mold, mildew, and accumulated dirt.",
       image: ['/assets/Service/lavagem/imagem1.jpg', '/assets/Service/lavagem/imagem2.jpg', '/assets/Service/lavagem/imagem3.jpg'],
       color: "#F0FFF0" // Verde pastel
     },
     {
       id: "demolition",
-      number: "9",
-      title: "Demolição e Remoção de Entulho",
-      description: "Serviços seguros de demolição e remoção eficiente de entulho e materiais indesejados, com práticas sustentáveis de descarte.",
+      number: "8",
+      title: "Demolition and Debris Removal",
+      description: "Safe demolition services and efficient removal of debris and unwanted materials, with sustainable disposal practices.",
       image: ['/assets/Service/demolicao/imagem1.jpg', '/assets/Service/demolicao/imagem2.jpg', '/assets/Service/demolicao/imagem3.jpg'],
-      color: "#FFF0F5", // Rosa claro
+      color: "#fff",
       textColor: "#fff"
     }
   ];
@@ -173,8 +165,8 @@ const Services = () => {
 
       {/* Título da seção */}
       <div className="py-12 text-center">
-        <h2 className="relative text-5xl md:text-6xl font-bold font-sans md:pt-20 text-primeira">
-          Serviços
+        <h2 className="relative text-5xl md:text-6xl font-bold font-sans text-primeira">
+          Services
           <span className="absolute left-[calc(50%-50px)] top-full w-[60px] h-[4px] bg-primeira"></span>
           <span className="absolute left-[calc(50%-40px)] top-[calc(100%+10px)] w-[80px] h-[4px] bg-primeira"></span>
         </h2>
