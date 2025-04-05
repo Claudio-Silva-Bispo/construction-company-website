@@ -110,7 +110,7 @@ export default function Navbar() {
     <header className="p-4 fixed top-0 w-full z-50 text-gray-700 max-w-[1240px]">
       <div className="container flex justify-between h-10 mx-auto w-full">
         <div className="hidden md:flex md:h-10 md:w-40">
-          <a href="/"><Image width={200} height={40} src={"/assets/logo/logo-fundo-Photoroom.png"} alt="Logo da empresa" /></a>
+          <a href="/"><Image width={200} height={40} src={"/assets/Logo/logo-sem-fundo-dois.png"} alt="Logo da empresa" /></a>
         </div>
         <div className="hidden lg:flex items-center space-x-3 text-lg">
           <Link href="/" className="px-4 py-2 hover:bg-terceira hover:text-white rounded-md flex items-center space-x-2">
@@ -159,8 +159,8 @@ export default function Navbar() {
 
       {/* Menu mobile */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 bg-terceira z-40 flex flex-col lg:hidden text-white">
-          <button onClick={toggleMobileMenu} className="self-end text-gray-800 pt-5 p-5">
+        <div className="fixed inset-0 bg-terceira z-40 flex flex-col lg:hidden text-white max-h-[100vh]">
+          <button onClick={toggleMobileMenu} className="self-end text-gray-800 p-5">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -193,8 +193,8 @@ export default function Navbar() {
               />
             </div>
 
-            <div className="flex flex-col justify-center leading-none">
-              <h1 className="text-white text-7xl md:text-8xl font-titulo drop-shadow-lg">
+            <div className="flex flex-col justify-center text-center leading-none">
+              <h1 className="text-white text-4xl font-titulo drop-shadow-lg">
                 Andrad's
               </h1>
               <p className="text-white text-lg md:text-lg lg:text-xl drop-shadow font-titulo font-light uppercase tracking-wide pl-6">

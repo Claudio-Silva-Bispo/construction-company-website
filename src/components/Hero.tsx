@@ -36,7 +36,7 @@ export default function Hero() {
         {/* Botão responsivo */}
         <div className="w-full md:w-auto flex justify-center mt-4 gap-5">
           <a
-            href="#"
+            href="#contact"
             className="bg-[#d7a647] text-white px-8 py-4 rounded-lg text-md md:text-xl font-semibold w-full md:w-auto text-center"
           >
             Get in Touch
