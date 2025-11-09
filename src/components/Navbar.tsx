@@ -147,7 +147,7 @@ export default function Navbar() {
 
         </div>
         <div className="hidden lg:flex items-center">
-          <a href="tel:+5511999999999" className="px-4 py-2 bg-terceira hover:text-white text-white rounded-md">Contato +(206) 9999-8888</a>
+          <a href="tel:+14259719002" className="px-4 py-2 bg-terceira hover:text-white text-white rounded-md">Contato +(425) 971-9002</a>
         </div>
           <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
