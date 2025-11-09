@@ -13,8 +13,8 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
   return (
     <>
       <Head>
-        <link rel="icon" type="image/png" href="/logo/favicon-64.png" />
-        <link rel="apple-touch-icon" href="/logo/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" href="assets/Logo/logo-sem-fundo-dois.png" />
+        <link rel="apple-touch-icon" href="assets/Logo/logo-sem-fundo-dois.png" />
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
