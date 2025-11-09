@@ -15,7 +15,6 @@ const Services = () => {
       description: "Complete construction solutions for homes and businesses in Seattle, built to the highest quality standards.",
       image: ['/assets/Service/residencial-comercial/imagem-um.jpg', '/assets/Service/residencial-comercial/imagem2.jpg', '/assets/Service/residencial-comercial/imagem3.jpg'],
       color: "#d7a647",
-      // Cores para texto em mobile
       titleColor: "#1a1a1a",
       descriptionColor: "#2d2d2d",
       keywordColor: "#1a1a1a"
@@ -49,9 +48,9 @@ const Services = () => {
       description: "Regular maintenance programs to protect your real estate investment in Seattle and prevent costly repairs in the future.",
       image: ['/assets/Service/manutencao/imagem1.jpg', '/assets/Service/manutencao/imagem2.jpg', '/assets/Service/manutencao/imagem3.jpg'],
       color: "#0C1D37",
-      titleColor: "#fff",
-      keywordColor: "#fff",
-      descriptionColor: "#fff"
+      titleColor: "#1a1a1a",
+      keywordColor: "#2d2d2d",
+      descriptionColor: "#1a1a1a"
     },
     {
       id: "floor",
@@ -60,9 +59,9 @@ const Services = () => {
       description: "Comprehensive floor installation, repair, and maintenance services for all types of surfaces, including wood, laminate, ceramic, and natural stone.",
       image: ['/assets/Service/piso/imagem1.jpg', '/assets/Service/piso/imagem2.jpg', '/assets/Service/piso/imagem3.jpg'],
       color: "#E8F6FA",
-      titleColor: "#1a1a1a",
-      descriptionColor: "#2d2d2d",
-      keywordColor: "#1a1a1a"
+      titleColor: "#ffff",
+      descriptionColor: "#ffff",
+      keywordColor: "#ffff"
     },
     {
       id: "painting",
