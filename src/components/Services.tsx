@@ -193,11 +193,11 @@ const Services = () => {
         {/* Open Graph */}
         <meta property="og:title" content="Construction Services in Seattle | Andrad PBS Solution" />
         <meta property="og:description" content="Professional construction, renovation, and repair services in Seattle and surrounding areas" />
-        <meta property="og:url" content="https://www.andradpbsolution.com/services" />
+        <meta property="og:url" content="https://www.andradpbsolution.com/#services" />
         <meta property="og:type" content="website" />
         
         {/* Canonical */}
-        <link rel="canonical" href="https://www.andradpbsolution.com/services" />
+        <link rel="canonical" href="https://www.andradpbsolution.com/#services" />
         
         <script
           type="application/ld+json"
