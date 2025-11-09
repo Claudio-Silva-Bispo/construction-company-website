@@ -4,7 +4,7 @@ import '../globals.css';
         
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Head } from 'next/document';
+import Head from 'next/head'
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
   const router = useRouter();

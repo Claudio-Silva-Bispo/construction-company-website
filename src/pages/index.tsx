@@ -4,7 +4,7 @@ import Contact from '@/components/Contact'
 import Feedback from '@/components/Feedback'
 import Hero from '../components/Hero'
 import Services from '../components/Services'
-import { Head } from 'next/document'
+import Head from 'next/head'
 
 export default function Home() {
 
