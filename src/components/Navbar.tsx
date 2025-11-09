@@ -23,7 +23,7 @@ export default function Navbar() {
     { item: 'Contact', path: '#contact', icon: faPhone },
     { item: 'Services', path: '#services', icon: faCalendarTimes },
     { item: 'Feedback', path: '#feedback', icon: faThumbsUp },
-    { item: 'Gallery', path: '/Gallery', icon: faGlobe },
+    // { item: 'Gallery', path: '/Gallery', icon: faGlobe },
   ];
 
   const sections = [
@@ -31,19 +31,19 @@ export default function Navbar() {
       title: 'Sobre nós',
       icon: faBuilding,
       description: 'About our company',
-      path: '/AboutCompany',
+      path: '#about-page',
     },
     {
       title: 'Contato',
       icon: faPhone,
       description: 'Get in touch with us',
-      path: '/ContactSection',
+      path: '#contact',
     },
     {
-      title: 'Galeria',
+      title: 'Services',
       icon: faGlobe,
-      description: 'Principais serviços',
-      path: '/Gallery',
+      description: 'Services we offer',
+      path: '#services',
     },
   ];
 

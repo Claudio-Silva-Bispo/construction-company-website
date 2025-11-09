@@ -54,7 +54,7 @@ export default function Feedback() {
                 </p>
 
                 <div className='grid md:flex gap-5'>
-                    <button type="button" className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 bg-primeira text-gray-50 focus:ring-white hover:ring-white "><a href="/Gallery">Service Gallery</a></button>
+                    <button type="button" className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 bg-primeira text-gray-50 focus:ring-white hover:ring-white "><a href="#services">Services</a></button>
 
                     <button type="button" className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 bg-primeira text-gray-50 focus:ring-white hover:ring-white"><a href="#contact">Free Estimate</a></button>
                 </div>
