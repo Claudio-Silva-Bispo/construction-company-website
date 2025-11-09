@@ -30,14 +30,14 @@ export default function Home() {
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Andrad PBS Solution | Construction & Home Improvement in Seattle" />
       <meta property="og:description" content="Professional construction and renovation services for residential and commercial properties in Seattle and surrounding areas." />
-      <meta property="og:image" content="https://www.google.com/search?q=https://www.andradpbsolution.com/assets/Logo/logo-sem-fundo-dois" />
+      <meta property="og:image" content="https://www.google.com/search?q=https://www.andradpbsolution.com/assets/Logo/logo-sem-fundo-dois.png" />
       <meta property="og:url" content="https://www.andradpbsolution.com" />
       <meta property="og:site_name" content="Andrad PBS Solution" />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Andrad PBS Solution | Construction & Renovation Experts" />
       <meta name="twitter:description" content="Professional construction and renovation services for residential and commercial properties in Seattle and surrounding areas." />
-      <meta name="twitter:image" content="https://www.google.com/search?q=https://www.andradpbsolution.com/assets/Logo/logo-sem-fundo-dois" />
+      <meta name="twitter:image" content="https://www.google.com/search?q=https://www.andradpbsolution.com/assets/Logo/logo-sem-fundo-dois.png" />
 
       <link rel="canonical" href="https://www.andradpbsolution.com" />
 
@@ -49,7 +49,7 @@ export default function Home() {
       "@type": "LocalBusiness",
       "name": "Andrad PBS Solution",
       "url": "https://www.andradpbsolution.com",
-      "logo": "https://www.google.com/search?q=https://www.andradpbsolution.com/assets/Logo/logo-sem-fundo-dois",
+      "logo": "https://www.google.com/search?q=https://www.andradpbsolution.com/assets/Logo/logo-sem-fundo-dois.png",
       "description": "Professional construction and renovation services in Seattle, WA. Licensed and insured contractors for residential and commercial projects.",
       "address": {
       "@type": "PostalAddress",

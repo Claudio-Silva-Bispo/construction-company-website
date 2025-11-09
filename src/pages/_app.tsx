@@ -26,7 +26,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
         "@type": "Organization",
         "name": "Andrad PBS Solution",
         "url": "https://www.andradpbsolution.com",
-        "logo": "https://www.google.com/search?q=https://www.andradpbsolution.com/assets/Logo/logo-sem-fundo-dois",
+        "logo": "https://www.google.com/search?q=https://www.andradpbsolution.com/assets/Logo/logo-sem-fundo-dois.png",
         "description": "Professional construction and renovation services in Seattle, WA. Licensed and insured contractors for residential and commercial projects.",
         "contactPoint": {
         "@type": "ContactPoint",

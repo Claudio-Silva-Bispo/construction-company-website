@@ -31,7 +31,7 @@ export default function Contact() {
                     "@type": "Organization",
                     name: "Andrad PBS Solution",
                     url: "https://www.andradpbsolution.com",
-                    logo: "https://www.google.com/search?q=https://www.andradpbsolution.com/assets/Logo/logo-sem-fundo-dois",
+                    logo: "https://www.google.com/search?q=https://www.andradpbsolution.com/assets/Logo/logo-sem-fundo-dois.png",
                     contactPoint: [
                         {
                         "@type": "ContactPoint",

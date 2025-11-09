@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React, { useEffect, useRef, useState } from 'react';
 
 const feedbacks = [
@@ -35,31 +36,84 @@ export default function Feedback() {
     };
 
     return (
-        <section className='feedback-background min-h-[70vh] flex flex-col md:flex-row justify-between items-center px-4 md:px-8 lg:px-16 bg-terceira' id='feedback' style={{
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
-        }}>
-            {/* Left side - Feedbacks */}
-            <div className="w-full md:w-1/2 flex flex-col gap-10 py-16 md:py-20">
-                <div className="text-center md:text-left before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto md:before:mx-0 before:bg-[#d7a647] pt-10 md:pt-0 flex flex-col gap-3">
-                    <h3 className="text-4xl md:text-5xl text-white mb-5 md:mb-0 text-center md:text-left font-bold">Quality & Delivery</h3>
+        <>
+            <Head>
+                <title>Client Testimonials & Reviews | Andrad PBS Construction in Seattle Area</title>
 
-                    <span className="text-md md:text-lg tracking-wider text-white max-w-md mx-auto md:mx-0 text-center md:text-left">
-                        See what people are saying about our repair and construction services and how we deliver quality results.
-                    </span>
+                <meta
+                name="description"
+                content="Read genuine client testimonials and reviews for Andrad PBS Solution's construction, renovation, and structural repair services in Seattle, Bellevue, Redmond, and surrounding Puget Sound areas. See our commitment to quality."
+                />
+
+                <meta
+                name="keywords"
+                content="construction testimonials, client reviews, seattle contractor feedback, renovation reviews, structural repair quality, bellevue construction, redmond contractor reviews, kirkland, tacoma, puget sound"
+                />
+
+                <meta name="author" content="Andrad PBS Solution" />
+                <link rel="canonical" href="https://www.google.com/search?q=https://www.andradpbsolution.com/#feedback" />
+
+                <meta property="og:title" content="Client Testimonials | Andrad PBS Solution" />
+                <meta property="og:description" content="Read reviews on our construction, renovation, and repair work in the Seattle area." />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.google.com/search?q=https://www.andradpbsolution.com/#feedback" />
+
+                <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "CollectionPage",
+                "name": "Client Testimonials and Reviews",
+                "description": "Genuine client feedback on construction and renovation projects.",
+                "mainEntity": {
+                "@type": "AggregateRating",
+                "itemReviewed": {
+                "@type": "LocalBusiness",
+                "name": "Andrad PBS Solution",
+                "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Seattle",
+                "addressRegion": "WA",
+                "addressCountry": "US"
+                },
+                "telephone": "+1-425-971-9002"
+                },
+                "ratingValue": "4.9",
+                "bestRating": "5",
+                "ratingCount": "97"
+                }
+                })
+                }}
+                />
+            </Head>
+            
+            <section className='feedback-background min-h-[70vh] flex flex-col md:flex-row justify-between items-center px-4 md:px-8 lg:px-16 bg-terceira' id='feedback' style={{
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+            }}>
+                {/* Left side - Feedbacks */}
+                <div className="w-full md:w-1/2 flex flex-col gap-10 py-16 md:py-20">
+                    <div className="text-center md:text-left before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto md:before:mx-0 before:bg-[#d7a647] pt-10 md:pt-0 flex flex-col gap-3">
+                        <h3 className="text-4xl md:text-5xl text-white mb-5 md:mb-0 text-center md:text-left font-bold">Quality & Delivery</h3>
+
+                        <span className="text-md md:text-lg tracking-wider text-white max-w-md mx-auto md:mx-0 text-center md:text-left">
+                            See what people are saying about our repair and construction services and how we deliver quality results.
+                        </span>
+                    </div>
+
+                    <p className="text-xl md:text-2xl text-center md:text-left max-w-md mx-auto md:mx-0 text-white leading-normal">
+                        "{feedbacks[feedbackAtivo]}"
+                    </p>
+
+                    <div className='grid md:flex gap-5'>
+                        <button type="button" className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 bg-primeira text-gray-50 focus:ring-white hover:ring-white "><a href="#services">Services</a></button>
+
+                        <button type="button" className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 bg-primeira text-gray-50 focus:ring-white hover:ring-white"><a href="#contact">Free Estimate</a></button>
+                    </div>
                 </div>
 
-                <p className="text-xl md:text-2xl text-center md:text-left max-w-md mx-auto md:mx-0 text-white leading-normal">
-                    "{feedbacks[feedbackAtivo]}"
-                </p>
-
-                <div className='grid md:flex gap-5'>
-                    <button type="button" className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 bg-primeira text-gray-50 focus:ring-white hover:ring-white "><a href="#services">Services</a></button>
-
-                    <button type="button" className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 bg-primeira text-gray-50 focus:ring-white hover:ring-white"><a href="#contact">Free Estimate</a></button>
-                </div>
-            </div>
-
-        </section>
+            </section>
+        </>
     );
 }
